@@ -120,3 +120,7 @@
     border-bottom: 7px solid transparent;
     content: '';
 }
+
+.form-group__range-slide:active::-webkit-slider-thumb {
+    background: green;
+  }
