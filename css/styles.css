@@ -23,3 +23,10 @@
     background: #377eff;
     padding: 10px 30px;
 }
+
+.main-page{
+    background-color: #f1f5fe;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
