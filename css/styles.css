@@ -30,3 +30,8 @@
     overflow: hidden;
     display: flex;
 }
+
+.main-page__left{
+    padding: 200px 20px 0 20px;
+    width: 30%;
+}
