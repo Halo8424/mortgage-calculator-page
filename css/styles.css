@@ -82,3 +82,11 @@
     margin: 0;
     cursor: pointer;
 }
+
+.form-group__range-slide::-webkit-slider-thumb{
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 10px white;
+    border-radius: 50%;
+}
