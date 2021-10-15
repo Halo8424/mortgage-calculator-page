@@ -13,3 +13,13 @@
     font-size: 1.8rem;
     color: #377eff;
 }
+
+.top-header__nav a{
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #377eff;
+    padding: 10px 30px;
+}
