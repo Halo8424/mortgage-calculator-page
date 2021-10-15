@@ -7,3 +7,9 @@
     z-index: 3;
     position: absolute;
 }
+
+.top-header__logo{
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #377eff;
+}
