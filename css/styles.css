@@ -53,3 +53,12 @@
     font-weight: 700;
     color: #777f8f;
 }
+
+.form-group__textInput{
+    color: #377eff;
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 100%;
+    border: none;
+    outline: none;
+}
