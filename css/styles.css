@@ -108,3 +108,15 @@
     padding: 5px 10px;
     margin-left: 8px;
 }
+
+.form-group__range-total:after {
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #377eff;
+    border-bottom: 7px solid transparent;
+    content: '';
+}
