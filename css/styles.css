@@ -62,3 +62,11 @@
     border: none;
     outline: none;
 }
+
+.form-group__range-group{
+    display: flex;
+}
+
+.form-group__range-slide-container{
+    width: calc(100% - 95px);
+}
