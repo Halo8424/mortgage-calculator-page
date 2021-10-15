@@ -124,3 +124,8 @@
 .form-group__range-slide:active::-webkit-slider-thumb {
     background: green;
   }
+
+.form-group__range-values{
+    display: flex;
+    justify-content: space-between;
+}
