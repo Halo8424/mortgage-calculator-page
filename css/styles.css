@@ -129,3 +129,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+.form-group__range-start, .form-group__range-end{
+    font-weight: 700;
+    color: #777f8f;
+}
