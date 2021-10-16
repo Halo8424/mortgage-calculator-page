@@ -9,113 +9,172 @@
     <title>Document</title>
   </head>
   <body>
-       <header class="top-header">
-        <div class="top-header__logo">
-            Financial Tree
-        </div>
-        <div class="top-header__nav">
-            <a href="#">SignUp</a>
-        </div>
-       </header>
-       <main class="main-page">
-           <div class="main-page__left">
-               <form action="">
-                   <div class="forms-two-col">
-                       <div class="form-group">
-                           <label class="form-group__label">Price</label>
-                           <input name="price" class="form-group__textInput" value="$300,000">
-                       </div>
-                       <div class="form-group">
-                           <label class="form-group__label">Loan Years</label>
-                           <input name="loan_years" class="form-group__textInput" value="30">
-                       </div>
-                   </div>
-                   <div class="form-group">
-                       <label class="form-group__label">Down Payment</label>
-                       <div class="form-group__range-group">
-                           <div class="form-group__range-slide-container">
-                               <input name="down_payment" class="form-group__range-slide " type="range" value="10" min="0" max="90"
-                               step="1">
-                               <div class="form-group__range-values">
-                                <span class="form-group__range-start">0%</span> <span class="form-group__range-end">90%</span>
-                               </div>
-                           </div>
-                           <span class="form-group__range-total total__down_payment">20%</span>
-                       </div>
-                   </div>
-                   <div class="form-group">
-                       <label class="form-group__label">Interest rate</label>
-                       <div class="form-group__range-group">
-                           <div class="form-group__range-slide-container">
-                               <input name="interest_rate" class="form-group__range-slide " type="range" value="2.99" min="0" max="8"
-                               step="0.01">
-                               <div class="form-group__range-values">
-                                <span class="form-group__range-start">0%</span> <span class="form-group__range-end">8%</span>
-                               </div>
-                           </div>
-                           <span class="form-group__range-total total__interest_rate">2.99</span>
-                       </div>
-                   </div>
-                   <div class="form-group">
-                       <label class="form-group__label">Property taxes/yr</label>
-                       <div class="form-group__range-group">
-                           <div class="form-group__range-slide-container">
-                               <input name="property_tax" class="form-group__range-slide " type="range" value="1.2" min="0" max="8"
-                               step="1">
-                               <div class="form-group__range-values">
-                                <span class="form-group__range-start">0%</span> <span class="form-group__range-end">3%</span>
-                               </div>
-                           </div>
-                           <span class="form-group__range-total total__property_tax">1.2</span>
-                       </div>
-                   </div>
-                   <div class="form-group">
-                       <label class="form-group__label">Home Insurance/yr</label>
-                       <div class="form-group__range-group">
-                           <div class="form-group__range-slide-container">
-                               <input name="home_insurance" class="form-group__range-slide " type="range" value="1200" min="0" max="5000"
-                               step="10">
-                               <div class="form-group__range-values">
-                                <span class="form-group__range-start">0</span> <span class="form-group__range-end">5000</span>
-                               </div>
-                           </div>
-                           <span class="form-group__range-total total__home_insurance">1200</span>
-                       </div>
-                   </div>
-                   <div class="form-group">
-                       <label class="form-group__label">HOA/yr</label>
-                       <div class="form-group__range-group">
-                           <div class="form-group__range-slide-container">
-                               <input name="hoa" class="form-group__range-slide " type="range" value="10" min="0" max="90"
-                               step="1">
-                               <div class="form-group__range-values">
-                                <span class="form-group__range-start">0</span> <span class="form-group__range-end">5000</span>
-                               </div>
-                           </div>
-                           <span class="form-group__range-total total__hoa">1200</span>
-                       </div>
-                   </div>
-                   <div class="form-group">
-                       <button class="form-group__button"> Get Results</button>
-                   </div>
-               </form>
-           </div>
-           <div class="main-page__right">
-               <!-- <img src="img/senerio4-img01.jpg" alt="House Image"
-                    class="image_panel"> -->
-            <div class="main-page__results">
-                <div class="main-page__results-container">
-                    <div class="main-page__results-chart">
-                        <canvas id="myChart" width="400" height="400"></canvas>
-                    </div>
-                    <div class="main-page__results-info">
-                        <h2>Mortgage Details</h2>
-                    </div>
-                </div>
+    <header class="top-header">
+      <div class="top-header__logo">Financial Tree</div>
+      <div class="top-header__nav">
+        <a href="#">SignUp</a>
+      </div>
+    </header>
+    <main class="main-page">
+      <div class="main-page__left">
+        <form action="">
+          <div class="forms-two-col">
+            <div class="form-group">
+              <label class="form-group__label">Price</label>
+              <input
+                name="price"
+                class="form-group__textInput"
+                value="$300,000"
+              />
             </div>
-           </div>
-       </main>
-
+            <div class="form-group">
+              <label class="form-group__label">Loan Years</label>
+              <input
+                name="loan_years"
+                class="form-group__textInput"
+                value="30"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-group__label">Down Payment</label>
+            <div class="form-group__range-group">
+              <div class="form-group__range-slide-container">
+                <input
+                  name="down_payment"
+                  class="form-group__range-slide"
+                  type="range"
+                  value="10"
+                  min="0"
+                  max="90"
+                  step="1"
+                />
+                <div class="form-group__range-values">
+                  <span class="form-group__range-start">0%</span>
+                  <span class="form-group__range-end">90%</span>
+                </div>
+              </div>
+              <span class="form-group__range-total total__down_payment"
+                >20%</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-group__label">Interest rate</label>
+            <div class="form-group__range-group">
+              <div class="form-group__range-slide-container">
+                <input
+                  name="interest_rate"
+                  class="form-group__range-slide"
+                  type="range"
+                  value="2.99"
+                  min="0"
+                  max="8"
+                  step="0.01"
+                />
+                <div class="form-group__range-values">
+                  <span class="form-group__range-start">0%</span>
+                  <span class="form-group__range-end">8%</span>
+                </div>
+              </div>
+              <span class="form-group__range-total total__interest_rate"
+                >2.99</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-group__label">Property taxes/yr</label>
+            <div class="form-group__range-group">
+              <div class="form-group__range-slide-container">
+                <input
+                  name="property_tax"
+                  class="form-group__range-slide"
+                  type="range"
+                  value="1.2"
+                  min="0"
+                  max="8"
+                  step="1"
+                />
+                <div class="form-group__range-values">
+                  <span class="form-group__range-start">0%</span>
+                  <span class="form-group__range-end">3%</span>
+                </div>
+              </div>
+              <span class="form-group__range-total total__property_tax"
+                >1.2</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-group__label">Home Insurance/yr</label>
+            <div class="form-group__range-group">
+              <div class="form-group__range-slide-container">
+                <input
+                  name="home_insurance"
+                  class="form-group__range-slide"
+                  type="range"
+                  value="1200"
+                  min="0"
+                  max="5000"
+                  step="10"
+                />
+                <div class="form-group__range-values">
+                  <span class="form-group__range-start">0</span>
+                  <span class="form-group__range-end">5000</span>
+                </div>
+              </div>
+              <span class="form-group__range-total total__home_insurance"
+                >1200</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-group__label">HOA/yr</label>
+            <div class="form-group__range-group">
+              <div class="form-group__range-slide-container">
+                <input
+                  name="hoa"
+                  class="form-group__range-slide"
+                  type="range"
+                  value="10"
+                  min="0"
+                  max="90"
+                  step="1"
+                />
+                <div class="form-group__range-values">
+                  <span class="form-group__range-start">0</span>
+                  <span class="form-group__range-end">5000</span>
+                </div>
+              </div>
+              <span class="form-group__range-total total__hoa">1200</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="form-group__button">Get Results</button>
+          </div>
+        </form>
+      </div>
+      <div class="main-page__right">
+        <!-- <img src="img/senerio4-img01.jpg" alt="House Image"
+                    class="image_panel"> -->
+        <div class="main-page__results">
+          <div class="main-page__results-container">
+            <div class="main-page__results-chart">
+              <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+            <div class="main-page__results-info">
+              <h2 class="results-info__info-title">Mortgage Details</h2>
+              <div class="results-info__info-details">
+                <label class="results-info__info-label">Principal & Interest</label>
+                <span class="results-info__info-numbers results-info__info-numbers--principal"
+                  >$1,400</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
     <script src="js/app.js"></script>
