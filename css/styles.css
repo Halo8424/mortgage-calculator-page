@@ -157,3 +157,10 @@
     height: 100%;
     object-fit: cover;
 }
+
+/* Start of Animation Classes */
+.main-page__right--animate .main-page__results{
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+    visibility: visible;
+}
