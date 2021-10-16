@@ -145,3 +145,9 @@
     outline: none;
     cursor: pointer;
 }
+
+.main-page__right{
+    width: 70%;
+    background: blue;
+    position: relative;
+}
