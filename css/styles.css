@@ -134,3 +134,14 @@
     font-weight: 700;
     color: #777f8f;
 }
+
+.form-group__button{
+    width: 100%;
+    background: #377eff;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
