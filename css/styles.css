@@ -164,3 +164,9 @@
     transition: opacity .5s ease-in-out;
     visibility: visible;
 }
+
+.main-page__right--animate .main-page__results-container{
+    transform: translate3d(0,0,0);
+    opacity: 1;
+    transition: opacity .5s ease-in-out .5s, transform .5s ease-in-out .5s; 
+}
