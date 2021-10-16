@@ -39,7 +39,7 @@
 .forms-two-col {
   display: grid;
   grid-template-columns: 50% 50%;
-  gap: 10px;
+  gap: 30px;
 }
 
 .form-group {
