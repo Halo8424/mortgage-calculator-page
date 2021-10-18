@@ -160,6 +160,10 @@
   transition: opacity 0.3s ease-in-out;
 }
 
+.image_panel:hover{
+  opacity: .4;
+}
+
 /* Start of Animation Classes */
 .main-page__right--animate .main-page__results {
   opacity: 1;
@@ -196,3 +200,22 @@
   transform: translate3d(0,400px,0);
   /* opacity: 0; */
 }
+
+.main-page__results-chart{
+  width: 400px;
+}
+
+.main-page__results-info{
+  width: 100%;
+  color: #343e57;
+}
+
+.results-info__info-title{
+  width: 100%;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+
