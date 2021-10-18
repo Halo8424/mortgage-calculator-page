@@ -230,4 +230,22 @@
   margin-bottom: .8rem;
 }
 
+.results-info__info-total{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #343e57;
+  padding: 20px;
+}
 
+.resutls-info__info-total label{
+  margin-bottom: 0;
+}
+
+
+.resutls-info__info-total .results-info__info-numbers{
+  font-weight: 100;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
