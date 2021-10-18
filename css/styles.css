@@ -224,5 +224,10 @@
   margin-bottom: 1rem;
 }
 
+.results-info__info-label{
+  font-size: .9rem;
+  font-weight: 700;
+  margin-bottom: .8rem;
+}
 
 
