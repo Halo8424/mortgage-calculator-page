@@ -218,4 +218,11 @@
   margin-bottom: 2rem;
 }
 
+.results-info__info-details{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+
 
