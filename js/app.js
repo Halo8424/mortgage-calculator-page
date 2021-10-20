@@ -10,9 +10,8 @@ let state = {
     hoa: document.querySelectorAll('[name="hoa"]')[0].value
 };
 
-console.log(state.price);
-console.log(state.loanYears);
-console.log(state.downPayment);
-console.log(state.interestRate);
-console.log(state.homeInsurance);
-console.log(state.hoa);
+function convertToNumber(str){
+    return Number(str.replace(/[^0-9\.-]+/g, ""))
+};
+
+console.log(state);
