@@ -63,7 +63,13 @@ let i;
 let inputText = document.getElementsByClassName('form-group__textInput');
 
 for(i = 0; i < inputText.length; i++){
-    inputText[i].addEventListener('input', ()=> console.log('input changed'))
+    inputText[i].addEventListener('input', updateInputState)
 };
 
-console.log(inputText);
+function updateInputState(event){
+    let name = event.target.name;
+    let value = event.target.value;
+    console.log(`name = ${name} value = ${value}`);
+}
+
+// console.log(inputText);
