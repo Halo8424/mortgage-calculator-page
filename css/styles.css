@@ -149,7 +149,7 @@
 
 .main-page__right {
   width: 70%;
-  /* background: blue; */
+  background: blue;
   position: relative;
 }
 
@@ -171,6 +171,8 @@
   visibility: visible;
 }
 
+/* End of Animation Classes */
+
 .main-page__right--animate .main-page__results-container {
   transform: translate3d(0, 0, 0);
   opacity: 1;
@@ -186,8 +188,8 @@
   justify-content: center;
   align-items: center;
   background: blue;
-  /* opacity: 0;
-    visibility: hidden; */
+  opacity: 0;
+  visibility: hidden;
 }
 
 .main-page__results-container {
@@ -198,7 +200,7 @@
   padding: 20px;
   border-radius: 10px;
   transform: translate3d(0, 220px, 0);
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 .main-page__results-chart {
