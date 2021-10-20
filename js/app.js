@@ -15,6 +15,7 @@ let totalLoan,
   monthlyPropertyTaxes,
   monthlyHomeInsurance,
   monthlyHOA,
+  monthlyTotal,
   labels = ["Principle & Interest", "Property Tax", "Home Insurance", "HOA"],
   backgroundColor = [
     "rgba(255, 99, 132,1)",
@@ -37,63 +38,100 @@ function convertToNumber(str) {
   return Number(str.replace(/[^0-9\.-]+/g, ""));
 }
 // init chart.js
-let ctx = document.getElementById('myChart').getContext('2d');
+let ctx = document.getElementById("myChart").getContext("2d");
 let myChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-        labels: labels,
-        datasets: [{
-            label: '# of Votes',
-            data: [
-                monthlyPrincipleInterest,
-                monthlyPropertyTaxes,
-                monthlyHomeInsurance,
-                monthlyHOA
-            ],
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderWidth: 1
-        }]
-    }
+  type: "doughnut",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        label: "# of Votes",
+        data: [
+          monthlyPrincipleInterest,
+          monthlyPropertyTaxes,
+          monthlyHomeInsurance,
+          monthlyHOA,
+        ],
+        backgroundColor: backgroundColor,
+        borderColor: borderColor,
+        borderWidth: 1,
+      },
+    ],
+  },
 });
 myChart.options.animation = false;
 
 // Event listeners to inputs
 let i;
-let inputText = document.getElementsByClassName('form-group__textInput');
+let inputText = document.getElementsByClassName("form-group__textInput");
 
-for(i = 0; i < inputText.length; i++){
-    inputText[i].addEventListener('input', updateInputState)
-};
-
-let inputSlides = document.getElementsByClassName('form-group__range-slide');
-
-for(i = 0; i < inputSlides.length; i++){
-    inputSlides[i].addEventListener('input', updateInputState)
-};
-
-function updateInputState(event){
-    let name = event.target.name;
-    let value = event.target.value;
-
-    if(name === 'price'){
-        value = convertToNumber(value);
-    }
-    if(event.target.type === 'range'){
-        let total = (document.getElementsByClassName(`total__${name}`))[0].innerHTML = `${value}`
-    }
-
-    state = {
-        ...state,
-        [name]: value
-    }
-    console.log(state);
+for (i = 0; i < inputText.length; i++) {
+  inputText[i].addEventListener("input", updateInputState);
 }
 
-document.getElementsByTagName('form')[0].addEventListener('submit', (event)=>{
-    event.preventDefault();
+let inputSlides = document.getElementsByClassName("form-group__range-slide");
 
-    document.getElementsByClassName('main-page__right')[0].classList.add('main-page__right--animate');
+for (i = 0; i < inputSlides.length; i++) {
+  inputSlides[i].addEventListener("input", updateInputState);
+}
+
+function updateInputState(event) {
+  let name = event.target.name;
+  let value = event.target.value;
+
+  if (name === "price") {
+    value = convertToNumber(value);
+  }
+  if (event.target.type === "range") {
+    let total = (document.getElementsByClassName(
+      `total__${name}`
+    )[0].innerHTML = `${value}`);
+  }
+
+  state = {
+    ...state,
+    [name]: value,
+  };
+  console.log(state);
+  calculateDate();
+}
+
+document.getElementsByTagName("form")[0].addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  document
+    .getElementsByClassName("main-page__right")[0]
+    .classList.add("main-page__right--animate");
+
+  calculateDate();
 });
+
+function calculateDate() {
+  totalLoan = state.price - state.price * (state.down_payment / 100);
+  totalMonths = state.loan_years * 12;
+  monthlyInterest = state.interest_rate / 100 / 12;
+  monthlyPrincipleInterest = (
+    totalLoan *
+    ((monthlyInterest * (1 + monthlyInterest) ** totalMonths) /
+      ((1 + monthlyInterest) ** totalMonths - 1))
+  ).toFixed(2);
+
+  monthlyPropertyTaxes = (
+    (state.price * (state.property_tax / 100)) /
+    12
+  ).toFixed(2);
+
+  monthlyHomeInsurance = state.home_insurance / 12;
+
+  monthlyHOA = state.hoa / 12;
+
+  monthlyTotal =
+    parseFloat(monthlyPrincipleInterest) +
+    parseFloat(monthlyPropertyTaxes) +
+    parseFloat(monthlyHomeInsurance) +
+    parseFloat(monthlyHOA);
+
+  console.log(monthlyTotal.toFixed(2));
+}
 
 // console.log(inputText);
