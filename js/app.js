@@ -37,11 +37,11 @@ function convertToNumber(str) {
   return Number(str.replace(/[^0-9\.-]+/g, ""));
 }
 
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
+let ctx = document.getElementById('myChart').getContext('2d');
+let myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: labels,
         datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
