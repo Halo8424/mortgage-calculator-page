@@ -68,7 +68,7 @@ for(i = 0; i < inputText.length; i++){
 
 let inputSlides = document.getElementsByClassName('form-group__range-slide');
 
-for(i = 0; i < inputText.length; i++){
+for(i = 0; i < inputSlides.length; i++){
     inputSlides[i].addEventListener('input', updateInputState)
 };
 
@@ -80,7 +80,7 @@ function updateInputState(event){
         value = convertToNumber(value);
     }
     if(event.target.type === 'range'){
-        let total = (document.getElementsByClassName(`total__${name}`))[0].innerHTML = `${value}%`
+        let total = (document.getElementsByClassName(`total__${name}`))[0].innerHTML = `${value}`
     }
 
     state = {
@@ -89,5 +89,11 @@ function updateInputState(event){
     }
     console.log(state);
 }
+
+document.getElementsByTagName('form')[0].addEventListener('submit', (event)=>{
+    event.preventDefault();
+
+    document.getElementsByClassName('main-page__right')[0].classList.add('main-page__right--animate');
+});
 
 // console.log(inputText);
