@@ -131,6 +131,8 @@ function calculateDate() {
     parseFloat(monthlyHomeInsurance) +
     parseFloat(monthlyHOA);
 
+    document.getElementsByClassName('results-info__info-numbers--principal')[0].innerHTML = parseFloat(monthlyPrincipleInterest).toFixed(2);
+
   console.log(monthlyTotal.toFixed(2));
 }
 
