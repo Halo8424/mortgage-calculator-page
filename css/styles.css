@@ -1,5 +1,5 @@
 .top-header {
-  width: 100%;
+  width: 96%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -160,8 +160,8 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.image_panel:hover{
-  opacity: .4;
+.image_panel:hover {
+  opacity: 0.4;
 }
 
 /* Start of Animation Classes */
@@ -197,20 +197,20 @@
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  transform: translate3d(0,400px,0);
+  transform: translate3d(0, 220px, 0);
   /* opacity: 0; */
 }
 
-.main-page__results-chart{
+.main-page__results-chart {
   width: 400px;
 }
 
-.main-page__results-info{
+.main-page__results-info {
   width: 100%;
   color: #343e57;
 }
 
-.results-info__info-title{
+.results-info__info-title {
   width: 100%;
   font-size: 1.4rem;
   text-align: center;
@@ -218,19 +218,19 @@
   margin-bottom: 2rem;
 }
 
-.results-info__info-details{
+.results-info__info-details {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
-.results-info__info-label{
-  font-size: .9rem;
+.results-info__info-label {
+  font-size: 0.9rem;
   font-weight: 700;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
-.results-info__info-total{
+.results-info__info-total {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,12 +239,11 @@
   padding: 20px;
 }
 
-.resutls-info__info-total label{
+.resutls-info__info-total label {
   margin-bottom: 0;
 }
 
-
-.resutls-info__info-total .results-info__info-numbers{
+span.results-info__info-numbers.results-info__info-numbers--total{
   font-weight: 100;
   font-size: 2rem;
   margin-bottom: 0;
