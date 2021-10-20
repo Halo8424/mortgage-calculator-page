@@ -7,7 +7,7 @@ let state = {
   home_insurance: document.querySelectorAll('[name="home_insurance"]')[0].value,
   hoa: document.querySelectorAll('[name="hoa"]')[0].value,
 };
-
+// Declared variables
 let totalLoan,
   totalMonths,
   monthlyInterest,
@@ -36,7 +36,7 @@ borderColor = [
 function convertToNumber(str) {
   return Number(str.replace(/[^0-9\.-]+/g, ""));
 }
-
+// init chart.js
 let ctx = document.getElementById('myChart').getContext('2d');
 let myChart = new Chart(ctx, {
     type: 'doughnut',
@@ -56,5 +56,9 @@ let myChart = new Chart(ctx, {
         }]
     }
 });
+myChart.options.animation = false;
 
-console.log(state);
+// Event listeners to inputs
+let inputText = document.getElementsByClassName('form-group__textInput');
+
+console.log(inputText);
