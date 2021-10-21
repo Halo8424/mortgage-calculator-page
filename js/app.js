@@ -132,8 +132,11 @@ function calculateDate() {
     parseFloat(monthlyHOA);
 
     document.getElementsByClassName('results-info__info-numbers--principal')[0].innerHTML = parseFloat(monthlyPrincipleInterest).toFixed(2);
-
-  console.log(monthlyTotal.toFixed(2));
+    document.getElementsByClassName('results-info__info-numbers--property_taxes')[0].innerHTML = parseFloat(monthlyPropertyTaxes).toFixed(2);
+    document.getElementsByClassName('results-info__info-numbers--home_insurance')[0].innerHTML = parseFloat(monthlyHomeInsurance).toFixed(2);
+    document.getElementsByClassName('results-info__info-numbers--hoa')[0].innerHTML = parseFloat(monthlyHOA).toFixed(2);
+    document.getElementsByClassName('results-info__info-numbers--total')[0].innerHTML = parseFloat(monthlyTotal).toFixed(2)
+  
 }
 
 // console.log(inputText);
