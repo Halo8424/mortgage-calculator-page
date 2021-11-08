@@ -153,5 +153,8 @@ function updateChart(chart, label, color){
       monthlyHOA,
     ]
   });
+  chart.options.transitions.active.animation.duration = 0;
+  chart.update();
 };
-// console.log(inputText);
+
+calculateDate();
