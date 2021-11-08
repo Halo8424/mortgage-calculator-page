@@ -254,6 +254,14 @@ span.results-info__info-numbers.results-info__info-numbers--total{
 /* @ Media */
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
+
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+
   .main-page{
     flex-direction: column;
     height: auto;
@@ -265,15 +273,43 @@ span.results-info__info-numbers.results-info__info-numbers--total{
 
   .top-header__nav a {
     font-size: 1rem;
+    
   }
 
   .main-page__left{
     width: 100%;
     padding: 80px 0 0 0;
+    margin: 0;
+    overflow: hidden;
   }
 
   form{
     margin: .8rem;
   }
+
+  .form-group__label{
+    font-size: .9rem;
+  }
+
+  .form-group__textInput{
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  .form-group__range-slide{
+    height: 7px;
+
+  }
+
+  .form-group__range-total{
+    left: 7px;
+    width: 55px;
+  }
+
+  .form-group__button{
+    width: 96%;
+  }
+
+  
 
   }
