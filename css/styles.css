@@ -310,6 +310,30 @@ span.results-info__info-numbers.results-info__info-numbers--total{
     width: 96%;
   }
 
+  .main-page__right{
+    width: 100%;
+  }
+
+  .image_panel{
+    display:none;
+  }
+
+  .main-page__results-container{
+    flex-direction: column;
+    height: 1114px;
+    
+  }
+  .main-page__results-chart{
+    width: 230px;
+  }
+
+  .results-info__info-title {
+    margin-bottom: 1rem;
+  }
+
+  .results-info__info-total{
+    padding: 10px;
+  }
   
 
   }
