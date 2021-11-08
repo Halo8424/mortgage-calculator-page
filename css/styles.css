@@ -250,3 +250,30 @@ span.results-info__info-numbers.results-info__info-numbers--total{
   font-size: 2rem;
   margin-bottom: 0;
 }
+
+/* @ Media */
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .main-page{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .top-header__logo {
+    font-size: 1.4rem;
+  }
+
+  .top-header__nav a {
+    font-size: 1rem;
+  }
+
+  .main-page__left{
+    width: 100%;
+    padding: 80px 0 0 0;
+  }
+
+  form{
+    margin: .8rem;
+  }
+
+  }
